@@ -1,0 +1,62 @@
+{
+	"name": "@studentsphere/linkgor",
+	"version": "0.0.1-alpha",
+	"description": "A Wrapper for Wigor",
+	"author": "Kaelian Baudelet <contact@kaelian.dev> (https://github.com/kaelianbaudelet)",
+	"license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/studentsphere-app/linkgor.git"
+	},
+	"keywords": [
+		"javascript",
+		"typescript",
+		"wrapper",
+		"cd",
+		"igensia",
+		"profile",
+		"profile",
+		"timetable",
+		"studentsphere"
+	],
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup src/index.ts --format esm,cjs --dts --clean",
+		"dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+		"docs": "typedoc",
+		"example:auth": "tsx examples/authentication.example.ts",
+		"example:timetable": "tsx examples/timetable.example.ts",
+		"example:profile": "tsx examples/profile.example.ts",
+		"prepare": "lefthook install",
+		"format": "biome format --write .",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.16",
+		"@commitlint/cli": "^21.0.2",
+		"@commitlint/config-conventional": "^21.0.2",
+		"@inquirer/prompts": "^8.5.2",
+		"@types/node": "^25.9.1",
+		"chalk": "^5.6.2",
+		"lefthook": "^2.1.9",
+		"tsup": "^8.5.1",
+		"tsx": "^4.22.4",
+		"typedoc": "^0.28.19",
+		"typescript": "^6.0.3"
+	},
+	"packageManager": "pnpm@11.5.1+sha512.93f7b57422ea7068257235b4c16eb60762eb68e1dc23723199cc739043ea9be2c4143274a399d8c6defa2b1176226d9ca1c4b63482d6200c1a8fbaa78c1d1485"
+}
