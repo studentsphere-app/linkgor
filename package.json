@@ -1,0 +1,47 @@
+{
+	"name": "linkgor",
+	"version": "0.0.1-alpha",
+	"description": "A Wrapper for Wigor",
+	"author": "Kaelian Baudelet <kaelianbaudelet> (https://github.com/kaelianbaudelet)",
+	"license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/studentsphere-app/linkgor.git"
+	},
+	"keywords": [
+		"wigor",
+		"wrapper",
+		"igensia",
+		"cd"
+	],
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup src/index.ts --format esm,cjs --dts --clean",
+		"dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+		"docs": "typedoc",
+		"exemple:auth": "tsx exemples/authentification.exemple.ts",
+		"exemple:timetable": "tsx exemples/timetable.exemple.ts",
+		"exemple:profile": "tsx exemples/profile.exemple.ts"
+	},
+	"devDependencies": {
+		"@inquirer/prompts": "^8.5.2",
+		"@types/node": "^25.9.1",
+		"chalk": "^5.6.2",
+		"tsup": "^8.5.1",
+		"tsx": "^4.22.4",
+		"typedoc": "^0.28.19",
+		"typescript": "^5.0.0"
+	}
+}
