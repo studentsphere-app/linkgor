@@ -1,0 +1,16 @@
+{
+	"title": "Types & API",
+	"pages": [
+		"login-with-credentials",
+		"get-planning",
+		"get-profile",
+		"get-cas-url",
+		"user",
+		"lesson",
+		"profile",
+		"instance",
+		"instances",
+		"cd-instances",
+		"igensia-instances"
+	]
+}

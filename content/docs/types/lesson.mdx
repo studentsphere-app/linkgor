@@ -1,0 +1,103 @@
+---
+title: Lesson
+description: The parsed timetable Lesson object type definition.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+The `Lesson` object represents a single class session parsed from the school timetable schedule server.
+
+```typescript
+interface Lesson {
+  ColorBlue: number;
+  ColorGreen: number;
+  ColorRed: number;
+  Commentaire: string | null;
+  CoursMixteInfoBulle: string | null;
+  CoursMixtePicto: string | null;
+  Description: string | null;
+  Duree: number | null;
+  End: string;
+  EndTimezone: string | null;
+  FondCour: string | null;
+  IsAllDay: boolean;
+  LibelleGroupe: string | null;
+  LibelleSemaine: string | null;
+  LienTrack: string | null;
+  LogoEcole: string | null;
+  Matiere: string | null;
+  NoCours: number;
+  NoGroupe: number;
+  NomEcole: string | null;
+  NomProf: string | null;
+  Origine: number;
+  RecurrenceException: string | null;
+  RecurrenceID: string | null;
+  RecurrenceRule: string | null;
+  Salles: string | null;
+  Start: string;
+  StartTimezone: string | null;
+  TeamsUrl: string | null;
+  TeamsURL: string | null;
+  Title: string | null;
+}
+```
+
+## Properties
+
+<TypeTable
+  type={{
+    Matiere: {
+      type: 'string | null',
+      description: "Subject name of the course module (e.g. 'Algorithmique').",
+    },
+    Salles: {
+      type: 'string | null',
+      description: "Classroom room code or name (e.g. 'B-205').",
+    },
+    NomProf: {
+      type: 'string | null',
+      description: "Name of the teacher conducting the lesson (e.g. 'Jean DUPONT').",
+    },
+    Start: {
+      type: 'string',
+      description: "ISO Date string representing the start time of the lesson.",
+    },
+    End: {
+      type: 'string',
+      description: "ISO Date string representing the end time of the lesson.",
+    },
+    Duree: {
+      type: 'number | null',
+      description: "Duration of the lesson in minutes.",
+    },
+    LibelleGroupe: {
+      type: 'string | null',
+      description: "Student group label or identifier.",
+    },
+    NoCours: {
+      type: 'number',
+      description: "Unique course record ID from the timetable system.",
+    },
+    IsAllDay: {
+      type: 'boolean',
+      description: "Indicates whether the course spans the entire day.",
+    },
+    TeamsURL: {
+      type: 'string | null',
+      description: "Online MS Teams class link (if available).",
+    },
+    ColorRed: {
+      type: 'number',
+      description: "RGB red value for display color rendering.",
+    },
+    ColorGreen: {
+      type: 'number',
+      description: "RGB green value for display color rendering.",
+    },
+    ColorBlue: {
+      type: 'number',
+      description: "RGB blue value for display color rendering.",
+    },
+  }}
+/>
