@@ -1,0 +1,87 @@
+---
+title: Introduction
+description: A lightweight TypeScript wrapper for Wigor services
+---
+
+![Banner](/assets/banner.svg)
+
+Welcome to the documentation for **`linkgor`**, a modern, lightweight, and zero-dependency TypeScript wrapper designed to interact with WigorServices portals.
+
+This project is entirely maintained by the **[StudentSphere](https://github.com/studentsphere-app)** team with the goal of providing open interoperability of digital student tools for everyone.
+
+## Compatibility
+
+`linkgor` is exclusively compatible with schools from the following educational groups (see the [list of supported schools](./schools)):
+- **[Compétences & Développement (C&D)](https://www.competences-developpement.com)**
+- **[IGENSIA Education](https://www.igensia-education.fr)**
+
+## Key Features
+
+- 🔑 **CAS Authentication** - Built-in Central Authentication Service flow automation.
+- 📅 **Planning Retrieval** - Retrieve student timetable/schedules within date ranges.
+- 👤 **Profile Parsing** - Retrieve student profile attributes (name, email, city, etc.) from CAS attributes.
+- 🪶 **Zero Dependencies** - Light package footprint relying on standard Web APIs (like native `fetch`).
+- 📳 **TypeScript First** - Built with TypeScript for full typing support and robust editor autocomplete.
+- 🏫 **Multi-School Support** - Easy routing and configuration of endpoints for multiple campus instances.
+
+## Installation
+
+Install `linkgor` using your preferred package manager:
+
+```bash
+# With pnpm
+pnpm add @studentsphere/linkgor
+
+# With npm
+npm install @studentsphere/linkgor
+
+# With yarn
+yarn add @studentsphere/linkgor
+
+# With bun
+bun add @studentsphere/linkgor
+```
+
+## Quick Start
+
+Here is a quick example showing how to authenticate a user, fetch their profile, and retrieve their schedule:
+
+```typescript
+import { loginWithCredentials, getPlanning, getProfile } from 'linkgor';
+
+async function run() {
+  // 1. Authenticate with the CAS server and retrieve session token
+  const user = await loginWithCredentials('epsi', 'john.doe', 'my_secure_password');
+  console.log(`Hello, ${user.firstname} ${user.lastname}!`);
+
+  // 2. Fetch the student's profile attributes
+  const profile = await getProfile('epsi', user.token);
+  console.log(`Email: ${profile.email}, Campus: ${profile.city}`);
+
+  // 3. Fetch the student's planning lessons
+  const lessons = await getPlanning('epsi', user.token);
+  console.log(`Retrieved ${lessons.length} lessons.`);
+}
+
+run().catch(console.error);
+```
+
+## Next Steps
+
+To dive deeper into how `linkgor` works and explore its API, check out these sections:
+
+<Cards>
+  <Card title="CAS Authentication Guide" href="./functionality/auth" />
+  <Card title="Planning Retrieval Guide" href="./functionality/planning" />
+  <Card title="Profile Parsing Guide" href="./functionality/profile" />
+  <Card title="Supported Schools" href="./schools" />
+</Cards>
+
+## Contributing
+
+`linkgor` is an open-source project, and we welcome contributions from the community! If you would like to help:
+
+- 🐛 **Report Issues:** Submit bug reports or request features on our [GitHub Issues](https://github.com/studentsphere-app/linkgor/issues).
+- 🛠️ **Pull Requests:** Fork the repository, create a branch, and submit a PR with your fixes or improvements.
+- 🏫 **School Portals:** Check our [Supported Schools](./schools) list and open a PR if you want to help add or update configurations for a campus.
+
