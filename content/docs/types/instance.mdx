@@ -1,0 +1,30 @@
+---
+title: Instance
+description: The School Instance type definition.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+The `Instance` object represents a school brand supported by Wigor CAS.
+
+```typescript
+interface Instance {
+  id: string;
+  name: string;
+}
+```
+
+## Properties
+
+<TypeTable
+  type={{
+    id: {
+      type: 'string',
+      description: "The unique identifier of the school instance (e.g. 'epsi').",
+    },
+    name: {
+      type: 'string',
+      description: "The official name of the school (e.g. 'EPSI').",
+    },
+  }}
+/>
