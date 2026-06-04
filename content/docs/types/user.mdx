@@ -1,0 +1,41 @@
+---
+title: User
+description: The authenticated User object type definition.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+The `User` object is resolved after a successful call to `loginWithCredentials()`.
+
+```typescript
+interface User {
+  firstname: string;
+  lastname: string;
+  program?: string;
+  token: string;
+}
+```
+
+## Properties
+
+<TypeTable
+  type={{
+    firstname: {
+      type: 'string',
+      description: "The student's first name as declared in the CAS database.",
+    },
+    lastname: {
+      type: 'string',
+      description: "The student's last name as declared in the CAS database.",
+    },
+    token: {
+      type: 'string',
+      description: 'The Wigor session token serialized as a JSON string.',
+    },
+    program: {
+      type: 'string',
+      optional: true,
+      description: "Optional course program name if resolved by the server.",
+    },
+  }}
+/>
