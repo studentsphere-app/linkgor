@@ -1,0 +1,60 @@
+---
+title: Supported Schools
+description: List of schools compatible with linkgor and their IDs
+---
+
+`linkgor` resolves timetable endpoints based on whether a school belongs to the **Compétences & Développement (C&D)** group or the **IGENSIA Education** group.
+
+Below is the list of all supported school instances and their corresponding `instanceId` strings.
+
+## Compétences & Développement (C&D)
+
+| Logo | School Name | `instanceId` |
+| :---: | :--- | :--- |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/3a.png" className="h-12 object-contain" /></div> | **3A** | `3a` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/epsi.png" className="h-12 object-contain" /></div> | **EPSI** | `epsi` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/esail.png" className="h-12 object-contain" /></div> | **ESAIL** | `esail` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/icl.png" className="h-12 object-contain" /></div> | **ICL** | `icl` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/idrac.png" className="h-12 object-contain" /></div> | **IDRAC Business School** | `idrac-business-school` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ieft.png" className="h-12 object-contain" /></div> | **IEFT** | `ieft` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/iet.png" className="h-12 object-contain" /></div> | **IET** | `iet` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ifag.png" className="h-12 object-contain" /></div> | **IFAG** | `ifag` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/igefi.png" className="h-12 object-contain" /></div> | **IGEFI** | `igefi` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ihedrea.png" className="h-12 object-contain" /></div> | **IHEDREA** | `ihedrea` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ileri.png" className="h-12 object-contain" /></div> | **ILERI** | `ileri` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/supdecom.png" className="h-12 object-contain" /></div> | **SUP DE COM** | `sup-de-com` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/vivamundi.png" className="h-12 object-contain" /></div> | **VIVA MUNDI** | `viva-mundi` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/wis.png" className="h-12 object-contain" /></div> | **WIS** | `wis` |
+
+## IGENSIA Education
+
+| Logo | School Name | `instanceId` |
+| :---: | :--- | :--- |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/abcp.png" className="h-12 object-contain" /></div> | **American Business School** | `american-business-school` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/bsi.png" className="h-12 object-contain" /></div> | **Business Science Institute** | `business-science-institute` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/cnva.png" className="h-12 object-contain" /></div> | **CNVA** | `cnva` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ecm.png" className="h-12 object-contain" /></div> | **ECM** | `ecm` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/emi.png" className="h-12 object-contain" /></div> | **EMI** | `emi` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/esa.png" className="h-12 object-contain" /></div> | **ESA** | `esa` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/esam.png" className="h-12 object-contain" /></div> | **ESAM** | `esam` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/icd.png" className="h-12 object-contain" /></div> | **ICD Business School** | `icd-business-school` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/igensiarh.png" className="h-12 object-contain" /></div> | **IGENSIA RH** | `igensia-rh` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/imis.png" className="h-12 object-contain" /></div> | **IMIS** | `imis` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/imsi.png" className="h-12 object-contain" /></div> | **IMSI** | `imsi` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ipi.png" className="h-12 object-contain" /></div> | **IPI** | `ipi` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/iscpa.png" className="h-12 object-contain" /></div> | **ISCPA** | `iscpa` |
+| <div className="h-16 flex items-center justify-center"><img src="/schools/ismm.png" className="h-12 object-contain" /></div> | **ISMM** | `ismm` |
+
+## Example Usage
+
+You pass these IDs directly as the first argument in `loginWithCredentials`, `getProfile`, or `getPlanning`:
+
+```typescript
+import { loginWithCredentials } from 'linkgor';
+
+// Login for an EPSI student:
+const user = await loginWithCredentials('epsi', 'username', 'password');
+
+// Login for an IPI student:
+const ipiUser = await loginWithCredentials('ipi', 'username', 'password');
+```
