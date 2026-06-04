@@ -1,0 +1,55 @@
+---
+title: Profile
+description: The parsed student Profile type definition.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+The `Profile` object is returned by `getProfile()`, parsed from Wigor CAS user attributes.
+
+```typescript
+interface Profile {
+  city: string;
+  cn: string;
+  country: string;
+  email: string;
+  firstname: string;
+  lastname: string;
+  username: string;
+}
+```
+
+## Properties
+
+<TypeTable
+  type={{
+    firstname: {
+      type: 'string',
+      description: "The student's first name.",
+    },
+    lastname: {
+      type: 'string',
+      description: "The student's last name.",
+    },
+    email: {
+      type: 'string',
+      description: "The student's institutional email address.",
+    },
+    username: {
+      type: 'string',
+      description: "The login username.",
+    },
+    cn: {
+      type: 'string',
+      description: "Common Name (usually full name).",
+    },
+    city: {
+      type: 'string',
+      description: "The campus city location.",
+    },
+    country: {
+      type: 'string',
+      description: "The country of the campus.",
+    },
+  }}
+/>

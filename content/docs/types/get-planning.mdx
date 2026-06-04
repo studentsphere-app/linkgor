@@ -1,0 +1,44 @@
+---
+title: getPlanning
+description: Fetch student timetable and schedule lessons.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+Fetches the timetable lessons from the schedule server using the session token.
+
+## Usage
+
+```typescript
+import { getPlanning } from 'linkgor';
+
+const lessons = await getPlanning('epsi', token, {
+  start: new Date('2026-09-01'),
+  end: new Date('2026-09-30')
+});
+```
+
+## Parameters
+
+<TypeTable
+  type={{
+    instanceId: {
+      type: 'string',
+      description: "The unique identifier of the school instance (e.g., 'epsi').",
+    },
+    token: {
+      type: 'string',
+      description: "The Wigor session token returned by loginWithCredentials.",
+    },
+    options: {
+      type: 'object',
+      optional: true,
+      description: "Custom date range constraints.",
+      type: '{\n  start?: Date;\n  end?: Date;\n}'
+    },
+  }}
+/>
+
+## Return Value
+
+Returns a `Promise` resolving to an array of [Lesson](/docs/types/lesson) objects.

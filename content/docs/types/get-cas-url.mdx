@@ -1,0 +1,36 @@
+---
+title: getCASURL
+description: Retrieve the CAS login server URL for a school instance.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+Retrieves the official Central Authentication Service (CAS) base server URL for a given school instance ID.
+
+<Callout title="Why does this exist?" type="info">
+  While all compatible schools currently route to the same Central Authentication Service (CAS) base URL, this function is maintained to ensure public API consistency. It also future-proofs the library in case the IGENSIA and C&D groups decide to partition or split their CAS servers in the future, as they have done historically for their respective apps.
+</Callout>
+
+## Usage
+
+```typescript
+import { getCASURL } from 'linkgor';
+
+const casUrl = getCASURL('epsi');
+// => "https://cas-p.wigorservices.net/cas/login"
+```
+
+## Parameters
+
+<TypeTable
+  type={{
+    _instanceId: {
+      type: 'string',
+      description: "The unique identifier of the school instance (e.g. 'epsi').",
+    },
+  }}
+/>
+
+## Return Value
+
+Returns a `string` containing the CAS authentication login URL.

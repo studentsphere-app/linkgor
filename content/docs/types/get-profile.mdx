@@ -1,0 +1,36 @@
+---
+title: getProfile
+description: Fetch student profile metadata.
+---
+
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+
+Retrieves student metadata attributes (campus location, name, email, etc.) from the CAS attributes.
+
+## Usage
+
+```typescript
+import { getProfile } from 'linkgor';
+
+const profile = await getProfile('epsi', token);
+console.log(profile.city);
+```
+
+## Parameters
+
+<TypeTable
+  type={{
+    instanceId: {
+      type: 'string',
+      description: "The unique identifier of the school instance (e.g., 'epsi').",
+    },
+    token: {
+      type: 'string',
+      description: "The Wigor session token returned by loginWithCredentials.",
+    },
+  }}
+/>
+
+## Return Value
+
+Returns a `Promise` resolving to a [Profile](/docs/types/profile) object.
