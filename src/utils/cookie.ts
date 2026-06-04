@@ -107,5 +107,3 @@ export function serializeCookies(jar: CookieJar, url: string): string {
 		.map(([name, value]) => `${name}=${value}`)
 		.join("; ");
 }
-
-// TODO: optimize session parsing performance
