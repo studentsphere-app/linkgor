@@ -36,7 +36,7 @@ export async function loginWithCredentials(
 	const scheduleServer = getPlanningServer(instanceId);
 
 	const getRes = await fetch(loginServer, {
-		headers: { "User-Agent": "node-fetch" },
+		headers: { "User-Agent": "linkgor" },
 	});
 	const initialCookies = getCookiesFromHeaders(getRes.headers);
 	updateCookies(jar, loginServer, initialCookies);
@@ -65,7 +65,7 @@ export async function loginWithCredentials(
 	const initialCookieHeader = serializeCookies(jar, loginServer);
 	const postHeaders: Record<string, string> = {
 		"Content-Type": "application/x-www-form-urlencoded",
-		"User-Agent": "node-fetch",
+		"User-Agent": "linkgor",
 	};
 	if (initialCookieHeader) {
 		postHeaders.Cookie = initialCookieHeader;
@@ -92,7 +92,7 @@ export async function loginWithCredentials(
 		postUrl = nextUrl.toString();
 		const cookieHeader = serializeCookies(jar, postUrl);
 		const headers: Record<string, string> = {
-			"User-Agent": "node-fetch",
+			"User-Agent": "linkgor",
 		};
 		if (cookieHeader) {
 			headers.Cookie = cookieHeader;
@@ -126,7 +126,7 @@ export async function loginWithCredentials(
 	let currentUrl = `${scheduleServer}?${params.toString()}`;
 
 	const redirectHeaders: Record<string, string> = {
-		"User-Agent": "node-fetch",
+		"User-Agent": "linkgor",
 	};
 	const scheduleCookieHeader = serializeCookies(jar, currentUrl);
 	if (scheduleCookieHeader) {
@@ -164,7 +164,7 @@ export async function loginWithCredentials(
 			currentUrl = new URL(location, currentUrl).toString();
 			const cookieHeader = serializeCookies(jar, currentUrl);
 			const redirectHeaders: Record<string, string> = {
-				"User-Agent": "node-fetch",
+				"User-Agent": "linkgor",
 			};
 			if (cookieHeader) {
 				redirectHeaders.Cookie = cookieHeader;
@@ -244,7 +244,7 @@ export async function getPlanning(
 
 	const scheduleCookieHeader = serializeCookies(jar, scheduleServer);
 	const scheduleHeaders: Record<string, string> = {
-		"User-Agent": "node-fetch",
+		"User-Agent": "linkgor",
 	};
 	if (scheduleCookieHeader) {
 		scheduleHeaders.Cookie = scheduleCookieHeader;

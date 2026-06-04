@@ -33,7 +33,7 @@ export async function getProfile(
 
 	const cookieHeader = serializeCookies(jar, casUrl);
 	const headers: Record<string, string> = {
-		"User-Agent": "node-fetch",
+		"User-Agent": "linkgor",
 	};
 	if (cookieHeader) {
 		headers.Cookie = cookieHeader;
