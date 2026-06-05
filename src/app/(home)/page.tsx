@@ -187,12 +187,15 @@ for (const lesson of lessons) {
 			<div className="flex-1 flex flex-col justify-center items-center px-6 pt-24 pb-16 text-center relative z-10">
 				<div className="max-w-(--fd-layout-width) w-full">
 					{/* Logo SVG */}
-					<div className="flex justify-center mb-6">
+					<div className="flex justify-center items-end gap-2 mb-6">
 						<img
 							src="/logos/linkgor.svg"
 							alt="linkgor logo"
 							className="h-20 dark:invert"
 						/>
+						<span className="text-fd-muted-foreground text-xs font-mono -ml-10">
+							0.0.1-alpha
+						</span>
 					</div>
 
 					{/* Maintained by Badge */}
