@@ -1,6 +1,6 @@
 {
 	"name": "@studentsphere/linkgor",
-	"version": "0.0.1-alpha",
+	"version": "1.0.0",
 	"description": "A Wrapper for Wigor",
 	"author": "Kaelian Baudelet <contact@kaelian.dev> (https://github.com/kaelianbaudelet)",
 	"license": "GPL-3.0",
