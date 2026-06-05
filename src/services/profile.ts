@@ -40,6 +40,7 @@ export async function getProfile(
 	}
 
 	const response = await fetch(casUrl, {
+		credentials: "omit",
 		headers,
 	});
 

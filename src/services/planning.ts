@@ -36,6 +36,7 @@ export async function loginWithCredentials(
 	const scheduleServer = getPlanningServer(instanceId);
 
 	const getRes = await fetch(loginServer, {
+		credentials: "omit",
 		headers: { "User-Agent": "linkgor" },
 	});
 	const initialCookies = getCookiesFromHeaders(getRes.headers);
@@ -72,6 +73,7 @@ export async function loginWithCredentials(
 	}
 
 	let response = await fetch(loginServer, {
+		credentials: "omit",
 		method: "POST",
 		headers: postHeaders,
 		body: form.toString(),
@@ -98,6 +100,7 @@ export async function loginWithCredentials(
 			headers.Cookie = cookieHeader;
 		}
 		response = await fetch(postUrl, {
+			credentials: "omit",
 			headers,
 			redirect: "manual",
 		});
@@ -134,6 +137,7 @@ export async function loginWithCredentials(
 	}
 
 	response = await fetch(currentUrl, {
+		credentials: "omit",
 		headers: redirectHeaders,
 		redirect: "manual",
 	});
@@ -170,6 +174,7 @@ export async function loginWithCredentials(
 				redirectHeaders.Cookie = cookieHeader;
 			}
 			response = await fetch(currentUrl, {
+				credentials: "omit",
 				headers: redirectHeaders,
 				redirect: "manual",
 			});
@@ -251,6 +256,7 @@ export async function getPlanning(
 	}
 
 	const response = await fetch(fullScheduleUrl, {
+		credentials: "omit",
 		headers: scheduleHeaders,
 	});
 
