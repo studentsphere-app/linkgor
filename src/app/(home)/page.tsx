@@ -19,34 +19,86 @@ import { GithubIcon } from "../../components/icons";
 type Tab = "quickstart" | "auth" | "planning";
 
 const schoolsList = [
-	{ name: "3A", logo: "/schools/3a.png" },
-	{ name: "American Business School Paris", logo: "/schools/abcp.png" },
-	{ name: "Business Science Institute", logo: "/schools/bsi.png" },
-	{ name: "CNVA", logo: "/schools/cnva.png" },
-	{ name: "ECM", logo: "/schools/ecm.png" },
-	{ name: "EMI", logo: "/schools/emi.png" },
-	{ name: "EPSI", logo: "/schools/epsi.png" },
-	{ name: "ESA", logo: "/schools/esa.png" },
-	{ name: "ESAIL", logo: "/schools/esail.png" },
-	{ name: "ESAM", logo: "/schools/esam.png" },
-	{ name: "ICD", logo: "/schools/icd.png" },
-	{ name: "ICL", logo: "/schools/icl.png" },
-	{ name: "IDRAC", logo: "/schools/idrac.png" },
-	{ name: "IEFT", logo: "/schools/ieft.png" },
-	{ name: "IET", logo: "/schools/iet.png" },
-	{ name: "IFAG", logo: "/schools/ifag.png" },
-	{ name: "IGEFI", logo: "/schools/igefi.png" },
-	{ name: "IGENSIA RH", logo: "/schools/igensiarh.png" },
-	{ name: "IHEDREA", logo: "/schools/ihedrea.png" },
-	{ name: "ILERI", logo: "/schools/ileri.png" },
-	{ name: "IMIS", logo: "/schools/imis.png" },
-	{ name: "IMSI", logo: "/schools/imsi.png" },
-	{ name: "IPI", logo: "/schools/ipi.png" },
-	{ name: "ISCPA", logo: "/schools/iscpa.png" },
-	{ name: "ISMM", logo: "/schools/ismm.png" },
-	{ name: "SUP DE COM", logo: "/schools/supdecom.png" },
-	{ name: "VIVA MUNDI", logo: "/schools/vivamundi.png" },
-	{ name: "WIS", logo: "/schools/wis.png" },
+	{ name: "3A", logo: "/schools/3a.png", url: "https://ecole3a.edu/" },
+	{
+		name: "American Business School Paris",
+		logo: "/schools/abcp.png",
+		url: "https://www.absparis.org/",
+	},
+	{
+		name: "Business Science Institute",
+		logo: "/schools/bsi.png",
+		url: "https://www.business-science-institute.com/",
+	},
+	{
+		name: "CNVA",
+		logo: "/schools/cnva.png",
+		url: "https://le-conservatoire.com/",
+	},
+	{ name: "ECM", logo: "/schools/ecm.png", url: "https://ecm-france.fr/" },
+	{ name: "EMI", logo: "/schools/emi.png", url: "https://www.emi-ecoles.com/" },
+	{ name: "EPSI", logo: "/schools/epsi.png", url: "https://www.epsi.fr/" },
+	{ name: "ESA", logo: "/schools/esa.png", url: "https://www.esa-igensia.ma/" },
+	{ name: "ESAIL", logo: "/schools/esail.png", url: "https://www.esail.fr/" },
+	{
+		name: "ESAM",
+		logo: "/schools/esam.png",
+		url: "https://www.esam-ecoles.com/",
+	},
+	{ name: "ICD", logo: "/schools/icd.png", url: "https://www.icd-ecoles.com/" },
+	{ name: "ICL", logo: "/schools/icl.png", url: "https://www.icl.fr/" },
+	{
+		name: "IDRAC",
+		logo: "/schools/idrac.png",
+		url: "https://www.ecoles-idrac.com/",
+	},
+	{
+		name: "IEFT",
+		logo: "/schools/ieft.png",
+		url: "https://www.ieftourisme.com/",
+	},
+	{ name: "IET", logo: "/schools/iet.png", url: "https://www.iet.fr/" },
+	{ name: "IFAG", logo: "/schools/ifag.png", url: "https://www.ifag.com/" },
+	{ name: "IGEFI", logo: "/schools/igefi.png", url: "https://www.igefi.fr/" },
+	{
+		name: "IGENSIA RH",
+		logo: "/schools/igensiarh.png",
+		url: "https://www.igensia-rh.fr/",
+	},
+	{
+		name: "IHEDREA",
+		logo: "/schools/ihedrea.png",
+		url: "https://www.ihedrea.org/",
+	},
+	{ name: "ILERI", logo: "/schools/ileri.png", url: "https://www.ileri.fr/" },
+	{ name: "IMIS", logo: "/schools/imis.png", url: "https://www.imislyon.com/" },
+	{
+		name: "IMSI",
+		logo: "/schools/imsi.png",
+		url: "https://www.imsi-ecoles.com/",
+	},
+	{ name: "IPI", logo: "/schools/ipi.png", url: "https://www.ipi-ecoles.com/" },
+	{
+		name: "ISCPA",
+		logo: "/schools/iscpa.png",
+		url: "https://www.iscpa-ecoles.com/",
+	},
+	{
+		name: "ISMM",
+		logo: "/schools/ismm.png",
+		url: "https://www.formation-montessori.fr/",
+	},
+	{
+		name: "SUP DE COM",
+		logo: "/schools/supdecom.png",
+		url: "https://www.ecoles-supdecom.com/",
+	},
+	{
+		name: "VIVA MUNDI",
+		logo: "/schools/vivamundi.png",
+		url: "https://vivamundi.fr/",
+	},
+	{ name: "WIS", logo: "/schools/wis.png", url: "https://www.wis-ecoles.com/" },
 ];
 
 export default function HomePage() {
@@ -599,9 +651,12 @@ for (const lesson of lessons) {
 
 					<div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-x-6 gap-y-10 mt-8">
 						{schoolsList.map((school) => (
-							<div
+							<a
 								key={school.name}
-								className="flex flex-col items-center text-center group"
+								href={school.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex flex-col items-center text-center group hover:scale-105 transition-transform duration-200"
 							>
 								<div className="h-16 w-full flex items-center justify-center mb-2">
 									<img
@@ -613,7 +668,7 @@ for (const lesson of lessons) {
 								<span className="text-[10px] font-semibold text-fd-muted-foreground group-hover:text-fd-foreground transition-colors duration-200 select-none">
 									{school.name}
 								</span>
-							</div>
+							</a>
 						))}
 					</div>
 				</div>
