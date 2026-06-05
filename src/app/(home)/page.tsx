@@ -246,7 +246,7 @@ for (const lesson of lessons) {
 							className="h-20 dark:invert"
 						/>
 						<span className="text-fd-muted-foreground text-xs font-mono -ml-10">
-							1.0.2
+							1.0.3
 						</span>
 					</div>
 
