@@ -399,11 +399,10 @@ for (const lesson of lessons) {
 								<button
 									key={tab}
 									onClick={() => setActiveTab(tab)}
-									className={`px-4 py-2.5 border-r border-fd-border transition-colors flex items-center gap-2 cursor-pointer ${
-										activeTab === tab
-											? "bg-fd-background text-fd-foreground border-b border-b-fd-primary"
-											: "text-fd-muted-foreground hover:text-fd-foreground hover:bg-fd-card/20"
-									}`}
+									className={`px-4 py-2.5 border-r border-fd-border transition-colors flex items-center gap-2 cursor-pointer ${activeTab === tab
+										? "bg-fd-background text-fd-foreground border-b border-b-fd-primary"
+										: "text-fd-muted-foreground hover:text-fd-foreground hover:bg-fd-card/20"
+										}`}
 								>
 									<span className="text-[10px] text-fd-muted-foreground">
 										TS
@@ -675,9 +674,9 @@ for (const lesson of lessons) {
 			</div>
 
 			{/* Footer */}
-			<footer className="pt-10 pb-8 border-t border-fd-border bg-fd-background/50 relative z-10 text-[11px] text-fd-muted-foreground/80 leading-relaxed">
+			<footer className="pt-10 pb-8 px-4 border-t border-fd-border bg-fd-background/50 relative z-10 text-[11px] text-fd-muted-foreground/80 leading-relaxed">
 				{/* Legal Disclaimer */}
-				<div className="max-w-(--fd-layout-width) mx-auto px-4 space-y-3.5 mb-8 text-fd-muted-foreground/80">
+				<div className="max-w-(--fd-layout-width) mx-auto space-y-3.5 mb-8 text-fd-muted-foreground/80">
 					<p>
 						This project,{" "}
 						<code className="px-1.5 py-0.5 rounded bg-fd-muted text-fd-foreground font-mono text-[10px] border border-fd-border/50">
@@ -686,7 +685,7 @@ for (const lesson of lessons) {
 						, is an independent open-source tool. It is not affiliated with,
 						authorized, maintained, sponsored, or endorsed by the Compétences &
 						Développement (C&D) group, IGENSIA Education, or the developers of
-						the WigorServices platform. All trademarks, logos, and brand names
+						the EdusignServices platform. All trademarks, logos, and brand names
 						are the property of their respective owners. Their mention here is
 						strictly for identification purposes and does not imply any
 						association.
@@ -729,11 +728,8 @@ for (const lesson of lessons) {
 					</p>
 				</div>
 
-				{/* Divider */}
-				<div className="border-t border-fd-border max-w-6xl mx-auto my-6 opacity-60" />
-
 				{/* Original Footer Links & Copyright */}
-				<div className="max-w-(--fd-layout-width) mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-fd-muted-foreground">
+				<div className="pt-6 border-t border-fd-border max-w-(--fd-layout-width) mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-fd-muted-foreground">
 					<div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
 						<p>© {new Date().getFullYear()} StudentSphere</p>
 						<span className="hidden sm:inline text-fd-border">|</span>
