@@ -399,10 +399,11 @@ for (const lesson of lessons) {
 								<button
 									key={tab}
 									onClick={() => setActiveTab(tab)}
-									className={`px-4 py-2.5 border-r border-fd-border transition-colors flex items-center gap-2 cursor-pointer ${activeTab === tab
-										? "bg-fd-background text-fd-foreground border-b border-b-fd-primary"
-										: "text-fd-muted-foreground hover:text-fd-foreground hover:bg-fd-card/20"
-										}`}
+									className={`px-4 py-2.5 border-r border-fd-border transition-colors flex items-center gap-2 cursor-pointer ${
+										activeTab === tab
+											? "bg-fd-background text-fd-foreground border-b border-b-fd-primary"
+											: "text-fd-muted-foreground hover:text-fd-foreground hover:bg-fd-card/20"
+									}`}
 								>
 									<span className="text-[10px] text-fd-muted-foreground">
 										TS
