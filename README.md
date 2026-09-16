@@ -16,7 +16,7 @@ This repository is no longer maintained and has been officially archived.
 Why?
 The Compétences et Développement (C&D) group, where I study, has permanently shut down the use of their proprietary internal scheduling solution, Wigor. The group has completely migrated its infrastructure to HyperPlanning.
 
-Because Wigor is no longer in use, I am dropping all maintenance for this project. Additionally, I am not a student at Igensia and my own school group has strictly changed its infrastructure, I no longer have the need or the ability to maintain the Igensia integration either.
+As Wigor is no longer in use, I am officially discontinuing maintenance for this project. Furthermore, since I have never been an Igensia student and my own school's infrastructure has been completely overhauled, I no longer have the need or the ability to maintain the Igensia integration.
 
 What's next?
 To ensure continuity, my focus is now entirely on the 14 schools within the C&D group. I will be working on a brand new library designed to easily and seamlessly interact with the new HyperPlanning infrastructure.
