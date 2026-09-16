@@ -65,9 +65,9 @@ export default function Layout({ children }: LayoutProps<"/">) {
 		>
 			<body className="flex flex-col min-h-screen">
 				<div className="bg-orange-500 text-white text-center p-3 text-sm font-medium">
-					⚠️ This project has been abandoned and archived. It is no longer
-					relevant or maintained as the Compétences & Développement school group
-					changed its infrastructure and abandoned Wigor for HyperPlanning.
+					This project has been abandoned and archived. It is no longer relevant
+					or maintained as the Compétences & Développement school group changed
+					its infrastructure and abandoned Wigor for HyperPlanning.
 				</div>
 				<Provider>{children}</Provider>
 			</body>
