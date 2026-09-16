@@ -64,6 +64,11 @@ export default function Layout({ children }: LayoutProps<"/">) {
 			suppressHydrationWarning
 		>
 			<body className="flex flex-col min-h-screen">
+				<div className="bg-orange-500 text-white text-center p-3 text-sm font-medium">
+					⚠️ Ce projet a été abandonné et archivé. Il n'est plus d'actualité et
+					n'est pas maintenu car le groupe d'écoles Compétences & Développement
+					a changé son infrastructure et a abandonné Wigor pour HyperPlanning.
+				</div>
 				<Provider>{children}</Provider>
 			</body>
 		</html>
