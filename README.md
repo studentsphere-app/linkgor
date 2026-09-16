@@ -9,12 +9,17 @@
 
 `linkgor` is a modern, lightweight TypeScript wrapper designed to interact with WigorServices portals. It is exclusively compatible with schools from the **[Compétences & Développement (C&D)](https://www.competences-developpement.com)** and **[IGENSIA Education](https://www.igensia-education.fr)** groups.
 
-- 🔑 **CAS Authentication**
-- 📅 **Planning Retrieval**
-- 👤 **Profile Parsing**
-- 🪶 **Zero Dependencies**
-- ⚡ **TypeScript First**
-- 🏫 **Multi-School Support**
+# ⚠️ Project Archived (Deprecation Notice)
+
+This repository is no longer maintained and has been officially archived.
+
+Why?
+The Compétences et Développement (C&D) group, where I study, has permanently shut down the use of their proprietary internal scheduling solution, Wigor. The group has completely migrated its infrastructure to HyperPlanning.
+
+Because Wigor is no longer in use, I am dropping all maintenance for this project. Additionally, since I am not a student at Igensia and my own school group has strictly changed its infrastructure, I no longer have the need or the ability to maintain the Igensia integration either.
+
+What's next?
+To ensure continuity, my focus is now entirely on the 14 schools within the C&D group. I will be working on a brand new library designed to easily and seamlessly interact with the new HyperPlanning infrastructure.
 
 ## Installation
 
